@@ -2,7 +2,7 @@ FROM node
 
 WORKDIR /app
 
-RUN apt-get update && apt-get install -y default-mysql-client netcat-openbsd
+RUN apt-get update && apt-get install -y default-mysql-client netcat-openbsd mysql-client
 
 COPY package.json package-lock.json ./
 
