@@ -2,11 +2,13 @@ FROM node
 
 WORKDIR /app
 
-RUN apt-get update && apt-get install -y mysql-client
+RUN apt-get update && apt-get install -y default-mysql-client netcat
 
-COPY . .
+COPY package.json ./
 
 RUN npm install
+
+COPY . .
 
 EXPOSE 80
 
